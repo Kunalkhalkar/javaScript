@@ -1,0 +1,50 @@
+<html>
+<body>
+<h1><p id="demo"></p></h1>
+<script>
+
+var student ={
+	name :"kunal",
+	age:21,
+	marks: 80.50,
+	branch :"computer",
+	
+};
+
+	document.getElementById("demo").innerHTML = student.name + " is of age "+ student.age;
+//document.write(student.name);
+</script>
+	
+	<script>
+	var school ={
+		name : "ndmvp",	// here ' : ' is used to assign value
+		establish : 1991,
+		owner : "kunal"
+		};
+		
+	document.getElementById("demo").innerHTML = school.name + " is establish in " + school.establish;// OR school.name + school.establish;
+	</script>
+	
+	<script>
+	var school2 = new Object(); // 'O' is Capital
+	school2.establish = 1991, // here "=" is used to assign valuez	 
+	school2.name = "NDMVP",
+	school2.fees = 5000;
+	
+	document.getElementById("demo").innerHTML = school2.name + " has " + school2.fees + " fees";
+	</script>
+	
+	<script>
+	function stud(name, age, marks){
+		this.name = name;
+		this.age = age;
+		this.marks = marks;
+	}
+	
+	var student1 = new stud("kunal", 22, 80.50);
+	document.getElementById("demo").innerHTML = student1.name + " " + student1.marks;
+	
+	
+</script>
+</body>
+</html>

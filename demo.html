@@ -1,0 +1,44 @@
+<html>
+<head>
+	</head>
+<body>
+	
+	<p id="demo"></p>
+	<p id="demo2"></p>
+
+<script>
+	let cars = ["bmw","honda","bently"];
+	document.getElementById("demo").innerHTML = cars;
+	document.write(cars[0]);
+	let len = cars.length;
+	document.getElementById("demo2").innerHTML = len;
+	cars.forEach((item, index, array)=> {console.log(item, index);});
+	
+//	let multiply = value => value*2;// its a arrow function 	
+	
+	let b = [1, 2, 3, 4, 5];
+	//let c = b.map(multiply);
+	
+	<!-- OR -->
+	
+	let  c = b.map(num => num*2); //with array method
+	
+	<!-- function multiply(value){ -->
+		<!-- return value * 2; -->
+	<!-- } -->
+	document.getElementById("demo").innerHTML = c;
+	
+	<!-- let x = [1, 2, 3, 5, 8] -->
+	<!-- let y = x.map(multiply);//multiply is a fuction  -->
+	<!-- document.getElementById("demo").innerHTML = y; -->
+	
+	let num1 = [1, 2, 3, 4, 5, 6, 7];
+	let num2 = num1.filter(value => value > 4);//filters the values from a array
+	let num3 = num1.reduce((total, value) => total + value); //return the sum of all element of arrauy
+	
+	document.getElementById("demo2").innerHTML = num3;
+	
+	</script>
+
+</body>
+</html>
