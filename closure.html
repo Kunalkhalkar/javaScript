@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a =10;
+        function one(){
+            var b= 20;
+            function two(){
+                var c =a  + b; // closures means inner functions have access of outer functions variables here c has acess of both a and b
+                return c;
+            }
+            return two();
+        }
+        document.write(one());
+    </script>
+</body>
+</html>

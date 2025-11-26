@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        function sayHello(value){ // value can be of an any type
+        document.getElementById("demo").innerHTML = value;
+            
+        }
+        sayHello("hello");
+
+    </script>
+    <script>
+        //function as a expression
+        var x = function(){
+            alert("Hello");
+        }
+        document.getElementById("demo").innerHTML = x();
+    </script>
+    <script>
+        var y =function(a, b) {return a*b};
+        document.getElementById("demo").innerHTML = y(10,20);
+    </script>
+    
+    <script>
+        //function as constructor
+        var myFunction = new Function("a", "b", "c", "return a+b+c"); //Function is constructor
+        var y =myFunction(10,20,30);
+        document.write("the sum is : "+y);
+    </script>
+    <script>
+        //self invoking function
+        (function (){
+            alert("I Love You");
+        })();
+    </script>
+   
+    <script>
+ //function as a value
+    let w= function(a,b){return a+b}
+    let z = w(10,20)*5;
+    document.write(z);
+    </script>
+
+    <script>
+        //function as a object
+        var body = "return 5* rad + rad"
+        var p = new Function("rad", body);
+        document.write(p(10));
+    </script>
+    <script>
+        //arrow function
+        let s = (a, b,c)  => {return a+b+c}
+        document.write(s(10,20,30));
+    </script>
+    <script>
+        //generator function
+        function* generateSeq(){
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let generator = generateSeq();
+        let one =generator.next();
+        let two = generator.next();
+        let three = generator.next();
+        alert(JSON.stringify(one))
+        alert(JSON.stringify(two))
+        alert(JSON.stringify(three))
+    </script>
+</body>
+</html>

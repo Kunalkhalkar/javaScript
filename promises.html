@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //promises.`
+        let car = new Promise(function(resolve, reject){
+            let tank_full =true;
+            if(tank_full)
+            resolve() ///resolve  is a state of promise
+        else
+        reject() // reject is a state of promise
+        });
+
+        car.then(function(){ //promise calling
+            document.write("Tank is full");
+        }).catch(function(){
+            document.write("Tank is empty");
+        });
+
+
+        let gender = new Promise(function(resolve, reject){
+            let gender = true;
+            if(gender)
+            resolve()
+        else
+        reject()
+        });
+
+        gender.then(function(){
+            document.write("Male");
+        }).catch(function(){
+            document.write("Female");
+        });
+    </script>
+</body>
+</html>

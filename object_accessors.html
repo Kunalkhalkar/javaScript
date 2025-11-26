@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let car = {
+            model : "bmw",
+            color : "red",
+            total_average : 10,
+
+            get average(){
+                return this.total_average
+            }
+        };
+        document.getElementById("demo").innerHTML = car.average;
+    </script>
+    <script>
+        let bike ={
+            name : "buggatti",
+            color: "red",
+            fuel_type: "",
+            average1 : 102,
+
+             set fuel(fuel){
+                this.fuel_type = fuel
+             }
+        };
+        bike.fuel = "petrol";
+        document.getElementById("demo").innerHTML=bike.fuel_type;
+       
+    </script>
+</body>
+</html>
