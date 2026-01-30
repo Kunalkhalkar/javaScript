@@ -1,6 +1,6 @@
 /**
 java script switch statements*/
-let a = 3;
+let a = 3;// you can change the value of a to test different cases
 console.log("there are various choices")
 switch(a){
     case 1:
