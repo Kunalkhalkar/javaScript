@@ -1,4 +1,4 @@
-{/*fetch the data from the object*/
+/*fetch the data from the object*/
 
 let marks = {
     harry : 90,
@@ -12,6 +12,8 @@ for(key in marks){
 }
 
 //OR
-for(let i = 0; i <  Object.keys(marks), i++){
+const keys = Object.keys(marks); //stores the object keys in the form of array
 
+for(let i = 0; i <  keys.length ; i++){
+                console.log(keys[i], + " "+marks[keys[i]]) // accesing the data from the object
 }
