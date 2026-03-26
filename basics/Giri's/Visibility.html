@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide or show the element</title>
+    <script>
+        function changeVisibility(){
+            if(document.getElementById("btn").value == "hide"){
+            document.getElementById("text").style.display="none";
+            document.getElementById("btn").setAttribute("value" ,"show");
+            }else{
+                  document.getElementById("text").style.display="";
+            document.getElementById("btn").setAttribute("value" ,"hide");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value = "hello" id="text">
+    <input type="button" name="btn" id="btn" value="hide" onclick="changeVisibility()">
+</body>
+</html>
