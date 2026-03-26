@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add list item</title>
+    <script>
+        function addItem(){
+            if(!(document.getElementById("text").value =="") ){
+            let list  =  document.getElementById("list");
+            let li = document.createElement("li");
+            li.textContent = document.getElementById("text").value;
+            document.getElementById("text").value = "";
+            document.getElementById("text").focus();
+            list.appendChild(li);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="text" id="text" placeholder="Enter text to add in list" >
+        <input type="button" name="btn" id="button" value="add Item" onclick = "addItem()">
+    </div>
+    <div>
+        <ul id="list">
+            
+        </ul>
+
+    </div>
+    </body>
+</html>
