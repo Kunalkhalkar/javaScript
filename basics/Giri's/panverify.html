@@ -1,0 +1,41 @@
+<!-- Example5: WAP to create one textbox and perform PAN CARD validation 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Verify</title>
+    <script>
+      
+
+        function checkPan(pan){
+                let chCount =0; //6
+                let dgCount = 0;// 4
+            for(let i = 0; i<pan.length; i++){
+                if(pan.length <=10){
+                    if(pan.charCodeAt(i) >=65 && pan.charCodeAt(i) <=90 || pan.charCodeAt(i) >=97 && pan.charCodeAt(i) <=122){
+                        ++chCount;
+                    }
+                    else if(pan.charCodeAt(i) >=48 && pan.charCodeAt(i) <=57){
+                        ++dgCount;
+                    }
+                        document.getElementById("msg").textContent ="not valid pan"
+                }
+                else{
+                        document.getElementById("msg").textContent ="not valid pan"
+                }
+            if(chCount == 6 && dgCount ==4){
+                        document.getElementById("msg").textContent ="valid pan"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="" onkeyup="checkPan(this.value)">
+    <div>
+        <h3 id = "msg"></h3>
+    </div>
+</body>
+</html>
