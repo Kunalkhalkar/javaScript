@@ -1,0 +1,45 @@
+<!-- TO DO List Application 
+ Practice: createElement, events
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To - Do</title>
+    <script>
+        function addTodo(){ 
+            let li = document.createElement("li");
+            let btn = document.createElement("button");
+            li.textContent =  document.getElementById("text").value;
+            btn.textContent = "delete";    
+            let todos = document.getElementById("todos");
+            li.style.listStyleType = "none";
+            li.style.color="red";
+            li.style.margin = 10+"px";
+            todos.appendChild(li);
+            li.appendChild(btn);
+            btn.setAttribute("onclick", "deletes(this.id)");
+            document.getElementById("text").value="";
+            document.getElementById("text").focus();
+        }
+        function deletes(){
+
+        }
+      
+    </script>
+ </head>
+ <body>
+    <div style="width: 80%; margin: auto; border: 2px solid red; align-items: center; text-align: center; padding: 20px;">
+        <input type="text" name="text" id="text" placeholder="Enter the todo" style="height: 30px; width: 300px;">
+        <button onclick="addTodo()"  style="height: 30px; width: 300px;">
+            add Todo
+        </button>        
+        <section>
+            <ul id="todos" >
+                
+            </ul>
+        </section>
+    </div>
+ </body>
+ </html>
