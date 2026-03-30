@@ -1,0 +1,34 @@
+<!-- Example2: WAP to create  one textbox and perform aadhar card validation 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Aadhar</title>
+    <script>
+        function checkAadhar(){
+            let tb = document.getElementById("aadhar").value;
+            for(let i=0; i<tb.length; i++){
+                if(tb.length > 12){
+                      document.getElementById("data").textContent = "length should less than 12 and numeric";
+                      break;
+                }
+               if( tb.charAt(i) >= '0' && tb.charAt(i) <= '9'){
+                    document.getElementById("data").textContent = "valid";
+               }
+               else{
+                  document.getElementById("data").textContent = "invalid";
+                  break;
+               }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="aadhar" id="aadhar" onkeyup="checkAadhar()">
+    <div>
+        <h3 id="data"></h3>
+    </div>
+</body>
+</html>
