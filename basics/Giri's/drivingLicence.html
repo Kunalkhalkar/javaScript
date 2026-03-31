@@ -1,0 +1,24 @@
+<!-- Example1: WAP to create one textbox and perform driving licence validation 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving license</title>
+    <script>
+        function checkName(){
+            let name = (document.getElementById("name").value).split(" ");
+            if(name.length > 3){
+                
+            }
+
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="dob" id="name" placeholder="Enter full name" onkeyup="checkName()">
+        <button id="submit" onclick="checkForm()">submit</button>
+    </div>
+</body>
+</html>
