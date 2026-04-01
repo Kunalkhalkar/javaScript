@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image change</title>
+    <script>
+        function changeImage(){
+            document.getElementById("image").setAttribute("src", "kunal22.jpeg");
+            document.getElementById("image").style.width="100px"    
+        }
+    </script>
+</head>
+<body>
+    <img src="kunal11.png" alt="Image" id="image" style = "width: 100px">
+    <input type="button" name="btn" id="button" onclick="changeImage()" value ="change" >
+</body>
+</html>
