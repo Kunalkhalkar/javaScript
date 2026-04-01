@@ -1,0 +1,25 @@
+<!-- Example3: WAP to create one textbox and perform mobile number validation 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile number validate</title>
+    <script>
+        function checkNum(value){
+            if(value.length > 10){
+                document.getElementById("data").textContent = "not valid number"
+            }else{
+                document.getElementById("data").textContent = "valid number"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="number" id="number" onkeyup="checkNum(this.value)">
+    <div>
+        <h3 id="data"></h3>
+    </div>
+</body>
+</html>
