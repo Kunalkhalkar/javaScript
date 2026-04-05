@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>take a input from user</title>
+</head>
+<body>
+    <Script>
+        let age = prompt("enter the age", "22"); //"22" is default value it is optional, prompt  always take input in string format
+        document.write(typeof (age)+ "\t")
+        
+        if(age > 18){
+            document.write("you are eligible to drive");
+        }
+        else{
+            document.write("you are not eligible to drive");
+        }
+        document.write("your age is : "+ age);  
+    </Script>
+</body>
+</html>
