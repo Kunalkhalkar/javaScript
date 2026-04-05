@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show value that  is given by user</title>
+    <script>
+        function showValue(){
+            let doc = document.getElementById("container");
+            let ele = document.createElement("p");
+            ele.innerHTML=document.getElementById("inp").value;
+            doc.appendChild(ele);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="inp">
+    <input type="button" name="btn" id="show" onclick="showValue()" value="show">
+    <div id ="container"> 
+
+    </div>
+</body>
+</html>
