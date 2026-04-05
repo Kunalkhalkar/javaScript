@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show form using JS</title>
+     <script>
+         function createForm(){
+            let form = document.getElementById("form");
+            form.innerHTML ="";
+
+            let container  = document.getElementById("container");
+            container.style.backgroundColor = "antiquewhite"
+            let inp = document.createElement("input")
+            inp.setAttribute("class", "inp");
+            inp.setAttribute("placeholder", "user name");
+            form.appendChild(inp);
+            inp.focus();
+            
+            inp = document.createElement("input")
+            inp.setAttribute("class", "inp");
+            inp.setAttribute("placeholder", "password");
+            inp.setAttribute("type", "password");
+            form.appendChild(inp);
+
+             inp = document.createElement("input")
+             inp.setAttribute("class", "inp");
+            inp.setAttribute("type", "password");
+            inp.setAttribute("placeholder", "confirm password");
+            form.appendChild(inp);
+
+            inp = document.createElement("input")
+             inp.setAttribute("class", "inp");
+             inp.setAttribute("type", "button");
+             inp.setAttribute("onClick", "submit()");
+            inp.setAttribute("value", "submit");
+            form.appendChild(inp); 
+        }
+        function submit(){
+            let form = document.getElementById("form");
+            let msg = document.createElement("h2")
+             msg.setAttribute("class", "msg");
+            msg.textContent = "Submitted Successfully"
+            form.appendChild(msg);
+        }
+    </script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        min-height: 50vh;
+    }
+    .inp{
+        display: flex;
+        padding: 10px;
+        width: 200px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .msg{
+        margin: auto;
+        width: 80%;
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+        display: flex;
+        color: tomato;
+    }
+
+</style>
+</head>
+<body>
+   
+    <div>
+        <button onclick="createForm()">
+            show form
+        </button>
+    </div>
+    <div class="container" id = "container">
+        <div id="form">
+    
+        </div>
+
+    </div>
+</body>
+</html>
