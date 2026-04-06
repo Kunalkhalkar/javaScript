@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout function</title>
+</head>
+<body>
+    <script>
+        count = 1;
+        function show(){
+             setInterval(hello, 10);
+        }
+        function hello(){
+            document.write( count++ +"\n");
+        }
+    </script>
+    <button onclick="show()">hello</button>
+</body>
+</html>
